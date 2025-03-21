@@ -19,3 +19,17 @@
 | 스케줄 다건 조회 | GET    | /api/schedules{scheduleId} | 요청 params                                                                                                                                             | 다건 응답 정보                                                                                                                                                            | 200: 정상조회 |
 
 # ERD
+
+---
+
+
+
+# API 
+
+| FUNCTION                 | METHOD | URL                        | REQUEST                                                                                                                                                          | RESPONSE                                                                                                                                                          | STATUS CODE |
+|--------------------------|--------|----------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------|
+| Schedule updates         | POST   | /api/schedules             | request body {  "scheduleName" : "burgerking" "sponserName" : "seoul ouba" "sponserOffers" : "50,000won" "location" : "seoul gangnam" "deadline" : "13.04.25"  } | response info  {  "schedulName" : "burgerking" "sponserName" : "seoul ouba" "sponserOffers" : "50,000won" "location" : "seoul gangnam" "deadline" : "13.04.25"  } | 200         |
+| Schedule deletions       | DELETE | /api/schedules{scheduleId} | Request params                                                                                                                                                   | deletions info                                                                                                                                                    | 200         |
+| Schedule edit            | PUT    | /api/schedules{scheduleId} | Request body {  }                                                                                                                                                | edit info                                                                                                                                                         | 200         |
+| Schedule search          | GET    | /api/schedules{scheduleId} | Request params                                                                                                                                                   | One response info                                                                                                                                                 | 200         |
+| Schedule multiple search | GET    | /api/schedules{scheduleId} | Request params                                                                                                                                                   | Several response info                                                                                                                                             | 200         |
